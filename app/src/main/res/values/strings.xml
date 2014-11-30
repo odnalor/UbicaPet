@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ubicapet</string>
+    <string name="title_section1">Mis mascotas</string>
+    <string name="title_section2">Mis avisos</string>
+    <string name="title_section3">Mapa</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="email">Ingrese Email</string>
+    <string name="solicitud_clave">Ingrese clave</string>
+    <string name="login_button">Login</string>
+    <string name="solicitud_nombre">Ingrese nombre completo</string>
+    <string name="registrar_button">Registrar</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="mensaje_login">Favor de completar los datos</string>
+    <string name="login_error_title">Opss!</string>
+    <string name="error_signup">Asegure de ingresar todos sus datos</string>
+    <string name="error_login">Asegure que su email y/o contraseña sean correctos</string>
+    <string name="error_signup2">Verifique los datos ingresados</string>
+    <string name="title_activity_lista__mascotas">Lista mascotas</string>
+    <string name="error_conexion">error conexion parse</string>
+    <string name="title_activity_prueba">prueba</string>
+    <string name="title_activity_pet_info">PetInfo</string>
+    <string name="lista_mascota_vacia">No posee registrada ninguna mascota</string>
+    <string name="button_registro_pet">Registar Mascota</string>
+    <string name="saludo">Bienvenido</string>
+    <string name="button_pet">Mis mascotas</string>
+    <string name="button_avisos">Mis avisos</string>
+    <string name="button_map">Ver avisos</string>
+    <string name="logout">LogOut</string>
+    <string name="registro_perdida">Registrar mascota perdida</string>
+    <string name="opcion_entregar">Entregar</string>
+    <string name="opcion_borrar">Borrar</string>
+    <string name="title_activity_lista_mascotas">Lista_mascotas</string>
+    <string name="no_encontrada">no se encontro la informacion solicitada</string>
+    <string name="button_agregar">Agregar mascota</string>
+    <string name="lista_vacia">No tiene mascotas registradas</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_registro_mascota">RegistroMascota</string>
+    <string name="nombre_mascota">Nombre mascota</string>
+    <string name="color_pelaje">Color del pelaje</string>
+    <string name="peso">Ingrese peso aproximado</string>
+    <string name="caracteristica">Ingrese alguna caracteistica visual</string>
+    <string name="button_foto">Elejir foto</string>
+    <string name="registro_exito">Su mascota fue registrada</string>
+    <string name="error_memoria">revice almacenamiento</string>
+    <string name="error_marcadores">Error al mostrar marcadores</string>
+    <string name="title_activity_busqueda_mapa">busquedaMapa</string>
+    <string name="button_buscar">BUSCAR</string>
+    <string name="text_map_busqueda">Opciones busqueda</string>
+    <string name="title_activity_transferir">Transferir</string>
+    <string name="correo_adoptante">Escriba correo usuario adoptate</string>
+    <string name="Titulo_adopcion">Dar en adopcion</string>
+    <string name="button_adoptar">Adoptar</string>
+
+</resources>

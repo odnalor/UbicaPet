@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ubicapet.rolando.ubicapet_3" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
+
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.ubicapet.rolando.ubicapet_3.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ubicapet.rolando.ubicapet_3.Login"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ubicapet.rolando.ubicapet_3.SignUp"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName="com.ubicapet.rolando.ubicapet_3.Login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ubicapet.rolando.ubicapet_3.PetInfo"
+            android:label="@string/title_activity_pet_info"
+            android:parentActivityName="com.ubicapet.rolando.ubicapet_3.Lista_mascotas"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ubicapet.rolando.ubicapet_3.Lista_mascotas"
+            android:label="@string/title_activity_lista_mascotas"
+            android:parentActivityName="com.ubicapet.rolando.ubicapet_3.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.ubicapet.rolando.ubicapet_3.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:parentActivityName="com.ubicapet.rolando.ubicapet_3.busquedaMapa"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.ubicapet.rolando.ubicapet_3.RegistroMascota"
+            android:label="@string/title_activity_registro_mascota"
+            android:parentActivityName="com.ubicapet.rolando.ubicapet_3.Lista_mascotas"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ubicapet.rolando.ubicapet_3.busquedaMapa"
+            android:label="@string/title_activity_busqueda_mapa"
+            android:parentActivityName="com.ubicapet.rolando.ubicapet_3.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ubicapet.rolando.ubicapet_3.Transferir"
+            android:label="@string/title_activity_transferir" >
+        </activity>
+    </application>
+
+</manifest>

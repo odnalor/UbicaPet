@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sexo">
+        <item>Macho</item>
+        <item>Hembra</item>
+    </string-array>
+    <string-array name="camara">
+        <item>Tomar foto</item>
+        <item>Elegir foto</item>
+    </string-array>
+    <string-array name="Estado">
+        <item>En casa</item>
+        <item>Perdido</item>
+        <item>En Adopciona</item>
+        <item>Fue Hallado</item>
+    </string-array>
+
+    <string-array name="Tipo_avisos">
+        <item>Adopcion</item>
+        <item>Hallazgo</item>
+        <item>Pérdida</item>
+    </string-array>
+
+    <string-array name="Raza_perro">
+        <item>Akita Americano</item>
+        <item>Akita Inu</item>
+        <item>lano Español</item>
+        <item>Alaskan Malamute</item>
+        <item>American Pit Bull Terrier</item>
+        <item>American Staffordshire Terrier</item>
+        <item>Basenji</item>
+        <item>Beagle</item>
+        <item>Border Collie</item>
+        <item>Bull Terrier</item>
+        <item>Bulldog Americano</item>
+        <item>Bulldog Inglés</item>
+        <item>Bullmastiff</item>
+        <item>Bóxer</item>
+        <item>Carlino</item>
+        <item>Chihuahua</item>
+        <item>Chin Japones</item>
+        <item>Chow Chow</item>
+        <item>Cocker Spaniel Americano</item>
+        <item>Doberman</item>
+        <item>Dogo Argentino</item>
+        <item>Dogo de Burdeos</item>
+        <item>Dogo del Tíbet</item>
+        <item>Dálmata</item>
+        <item>Fila Brasilero	</item>
+        <item>Galgo Español</item>
+        <item>Golden Retriever</item>
+        <item>Gran Danés</item>
+        <item>Husky Siberiano</item>
+        <item>Keeshond</item>
+        <item>Komondor</item>
+        <item>Kuvasz</item>
+        <item>Labrador Retriever</item>
+        <item>Leonberger</item>
+        <item>Mastiff</item>
+        <item>Mastin Napolitano</item>
+        <item>Mastín Español</item>
+        <item>Mastín del Pirineo</item>
+        <item>Mestizo</item>
+        <item>Pastor Alemán</item>
+        <item>Pekinés</item>
+        <item>Perro de Agua Español</item>
+        <item>Perro de Montaña de los Pirineos</item>
+        <item>Perro de San Huberto</item>
+        <item>Pointer Inglés</item>
+        <item>Presa Canario</item>
+        <item>Ratonero Bodeguero Andaluz</item>
+        <item>Rottweiler</item>
+        <item>Samoyedo</item>
+        <item>San Bernardo</item>
+        <item>Setter Inglés</item>
+        <item>Setter Irlandés Rojo</item>
+        <item>Shiba Inu</item>
+        <item>Staffordshire Bull Terrier</item>
+        <item>Terranova</item>
+        <item>Terrier Galés</item>
+        <item>Tosa Inu</item>
+        <item>Xoloitzcuintle</item>
+        <item>Yorkshire Terrier</item>
+    </string-array>
+
+
+
+
+</resources>
