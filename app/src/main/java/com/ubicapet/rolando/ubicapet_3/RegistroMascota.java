@@ -68,6 +68,9 @@ public class RegistroMascota extends Activity {
                     }
                     break;
                 case 1: // tomar foto
+                    Intent choosePhotoIntent = new Intent(Intent.ACTION_GET_CONTENT);
+                    choosePhotoIntent.setType("image/*");
+                    startActivityForResult(choosePhotoIntent, PICK_PHOTO_REQUEST);
                     break;
             }
         }
@@ -252,6 +255,8 @@ public class RegistroMascota extends Activity {
         });
     }
 
+
+
     private boolean isNetworkAvaible() {
         ConnectivityManager manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = manager.getActiveNetworkInfo();
@@ -270,6 +275,23 @@ public class RegistroMascota extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_registro_mascota, menu);
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK){
+            //agregar a galeria
+            Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+            mediaScanIntent.setData(mMediaUri);
+            sendBroadcast(mediaScanIntent);
+
+        }
+        else  if (resultCode != RESULT_CANCELED){
+            Toast.makeText(this,R.string.login_error_title, Toast.LENGTH_LONG).show();
+
+        }
     }
 
     @Override

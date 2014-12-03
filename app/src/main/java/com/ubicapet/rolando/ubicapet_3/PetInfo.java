@@ -30,7 +30,7 @@ import java.util.List;
 public class PetInfo extends ListActivity {
     private static final String TAG = PetInfo.class.getSimpleName();
     protected ParseUser mCurrentUser;
-    protected String mName;
+    protected String mName, mRaza;
     protected Button mPerdida;
     protected String[] PetsNames;
 
@@ -45,10 +45,25 @@ public class PetInfo extends ListActivity {
         setProgressBarIndeterminateVisibility(true);
         if (isNetworkAvaible()){
             ListarInfo();
+
         }
         else {
             Toast.makeText(PetInfo.this, R.string.error_conexion, Toast.LENGTH_LONG).show();
         }
+
+        mPerdida = (Button) findViewById(R.id.button_perdida);
+        mPerdida.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(PetInfo.this, Registro_Perdida.class);
+                intent.putExtra("Pet", mName);
+                intent.putExtra("Raza", mRaza);
+                startActivity(intent);
+
+
+            }
+        });
 
 
     }
@@ -69,24 +84,14 @@ public class PetInfo extends ListActivity {
                     PetsNames[1] = parseObject.getString("Race");
                     PetsNames[2] = parseObject.getString("Char");
                     PetsNames[3] = parseObject.getString("Estado");
+                    mRaza = parseObject.getString("Race");
 
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                             getListView().getContext(),
                             android.R.layout.simple_list_item_1, PetsNames);
                     setListAdapter(adapter);
 
-                    mPerdida = (Button) findViewById(R.id.button_perdida);
-                    mPerdida.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-/*
-                            Intent intent = new Intent(PetInfo.this, Registro_perdida.class);
-                            intent.putExtra("Pet", mName);
-                            startActivity(intent);
-*/
 
-                        }
-                    });
 
 
                 }
@@ -134,7 +139,6 @@ public class PetInfo extends ListActivity {
         switch (id){
             case R.id.action_delete :
                 // borrar mascota
-
                 ParseQuery query = new ParseQuery("Pets");
                 query.whereEqualTo("parent", mCurrentUser);
                 query.whereEqualTo("name", mName);
@@ -144,7 +148,6 @@ public class PetInfo extends ListActivity {
                         pet.deleteInBackground();
                     }
                 });
-
 
                 ParseQuery query2 = new ParseQuery("Advertise");
                 query2.whereEqualTo("parent", mCurrentUser);
@@ -156,28 +159,18 @@ public class PetInfo extends ListActivity {
                             for (ParseObject ads : avisos) {
 
                                 ads.deleteInBackground();
-
                             }
 
                         }
 
                     }
                 });
-
                 Intent intent = new Intent(PetInfo.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
-                finish();
+                break;
 
-
-
-
-            case R.id.action_transferir :
-
-                Intent intent2 = new Intent(PetInfo.this, Transferir.class);
-                intent2.putExtra("Pet", mName);
-                startActivity(intent2);
         }
 
 

@@ -44,7 +44,7 @@ public class Transferir extends Activity {
             public void onClick(View v) {
 
                 final ParseQuery<ParseObject> query = ParseQuery.getQuery("User");
-
+                query.whereEqualTo("username", mNew);
                 query.getFirstInBackground(new GetCallback<ParseObject>() {
                     @Override
                     public void done(ParseObject parseObject, ParseException e) {
@@ -53,7 +53,7 @@ public class Transferir extends Activity {
                             PetsNames = new String[2];
 
                             PetsNames[0] = parseObject.getString("username");
-                            PetsNames[1] = parseObject.getString("email");
+                            PetsNames[1] = parseObject.getString("objectId");
                             Toast.makeText(Transferir.this, PetsNames[0]+"\n "+PetsNames[1], Toast.LENGTH_LONG).show();
 
 
